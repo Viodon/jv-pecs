@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class MachineServiceImpl implements MachineService<Machine> {
     @Override
-    public List<Machine> getAll(Class type) {
+    public List<Machine> getAll(Class<? extends Machine> type) {
         final MachineProducer<Bulldozer> bulldozerProducer = new BulldozerProducer();
         final MachineProducer<Excavator> excavatorProducer = new ExcavatorProducer();
         final MachineProducer<Truck> truckProducer = new TruckProducer();
